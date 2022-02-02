@@ -1,0 +1,28 @@
+@import "vars";
+
+.container{
+    margin-left: $marginXAxis;
+    margin-right: $marginXAxis;
+}
+
+
+.felx-row{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.displayFlex{
+    display: flex;
+    justify-content: center;
+}
+
+.lastSection{
+    @extend .displayFlex;
+   justify-content: space-evenly;
+   position: relative;
+   top: -370px;
+   font-size: 50px;
+   color: white;
+
+}
