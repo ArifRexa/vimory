@@ -13,7 +13,7 @@ nav{
     display: flex;
     justify-content: space-around;
     img{
-        width: 40px;
+        width: 120px;
     }
     ul{
         list-style-type: none;
@@ -49,6 +49,7 @@ nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
     @extend .container;
     padding: 20px;
     .heading{
@@ -57,6 +58,7 @@ nav{
     .heading-des{
         font-size: $paragraphFontSize;
         margin-right: 40px;
+        width: 550px
 
         
     }
@@ -65,14 +67,17 @@ nav{
 
 .mini-card-parent{
     @extend .felx-row;
+    flex-wrap: wrap;
     
     .mini-card{
         @extend .felx-row;
         margin-right: 20px;
+        margin-bottom: 10px;
         background-color: black;
         color: white;
         padding: 8px 20px;
         border-radius: 8px;
+        width: 245px;
     }
 }
 
@@ -102,9 +107,11 @@ nav{
     @extend .container;
     align-items: center;
     margin-top: 50px;
+    flex-wrap: wrap;
 
     .markingSectionMini{
         @extend .displayFlex;
+        width: 380px;
 
         .textAlignment1{
             text-align: right;
@@ -146,6 +153,7 @@ nav{
         display: flex;
         justify-content: space-around;
         align-items: center;
+        flex-wrap: wrap;
         margin-top: 50px;
         margin-left: 5%;
         margin-right: 5%;
@@ -158,6 +166,7 @@ nav{
             padding-top: 60px;
             border-radius: 50px 3px 50px 3px;
             box-shadow: 5px 5px 15px rgba(177, 177, 177, 0.514);
+            margin-bottom: 30px;
             
     
             .planningHeader{
@@ -199,6 +208,40 @@ nav{
 }
 
 
+.clints-review{
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: $marginXAxis;
+    margin-right: $marginXAxis;
+
+    .review{
+        width: 350px;
+        .comments{
+            
+            background-color: rgba(163, 148, 148, 0.089);
+            padding: 20px;
+
+            .intro{
+                margin-top: 15px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .star{
+                    background-color: white;
+                    padding: 6px;
+                    border-radius: 12px 1px 12px 1px;
+                    width: 90px;
+
+                }
+            }
+        }
+    }
+}
+
+
 
 /*================== Footer Section ==================*/
 
@@ -207,8 +250,8 @@ nav{
     content: "";
     position: absolute;
     background: url('../images/back.png') no-repeat center center/cover;
-    height: 700px;
-    top:2470px;
+    height: 750px;
+    top:2970px;
     left:0px;
     width: 100%;
     z-index: -1;
@@ -240,13 +283,15 @@ footer{
     }
     .social-icons{
         @extend .lastSection;
+        flex-wrap: wrap;
         top: 480px;
-        margin-left: 300px;
+        margin-left: 22%;
         margin-right: 300px;
     }
     .footer-end{
         @extend .lastSection;
         justify-content: space-around;
+        flex-wrap: wrap;
         font-size: 12px;
         top: 495px;
         margin-left: 50px;
@@ -268,4 +313,178 @@ footer{
         top: 520px;
     }
     
+}
+
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+    nav {
+        right: 0;
+        margin-left: 15px;
+    }
+    nav img {
+        width: 75px;
+        height: 40px;}
+
+    nav ul {
+        list-style-type: none;
+        margin-left: 20px;
+    }
+    nav ul li a {
+        padding: 3px;
+        font-size: 0.8em;
+        }
+    .header-section{
+        margin-left: 6%;
+    }
+    .bannerText{
+        width: 300px;
+    }
+    .header-section .heading{
+        font-size: 30px;
+        font-weight: bold;
+        width: 390px;
+        
+    }
+    .header-section .heading-des{
+        font-size: 15px;
+        width: 390px;
+    }
+
+    .bannerTab img{
+        width: 300px;
+        margin-top: 15%;
+        margin-left: 10%;
+    }
+
+    .markingContainer{
+        margin-left: 30%;
+    }
+    .tabcurl{
+        width: 250px;
+    }
+
+
+    .mainHeading{
+        font-size: 2em;
+        font-weight: bold;
+    }
+    .slogan{
+        font-size: 25px;
+    }
+
+    #pricingSection{
+        margin-left: 30%;
+    }
+
+    .clints-review{
+        margin-left: 30%;
+    }
+    .review{
+        margin-top: 25%;
+    }
+
+    .footerBG::before{
+        height: 1280px;
+        top:4550px;
+        left:0px;
+        width: 141%;
+        z-index: -1;
+        opacity:1;
+        
+    }
+    footer .footerHeader{
+        margin-left: 35%;
+    }
+    footer .footerHeader .mini-card-parent{
+        margin-left: 12%;
+    }
+    footer .footerHeader .downloadHead{
+        font-size: 2em;
+    }
+    footer .footerHeader .downloadsec{
+        font-size: 1em;
+    }
+    footer .social-icons{
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        margin-left: 70%;
+
+    }
+    footer .footer-end>h1{
+        display: none;
+        
+    }
+    footer .footer-end{
+        display: none;
+    }
+    footer .endLine{
+        margin-left: 25%;
+        width: 95%;
+    }
+    .lastLine{
+        margin-left: 4%;
+        width: 130%;
+    }
+    
+
+
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (min-width : 321px) {
+/* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 320px) {
+/* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+/* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+/* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+/* Styles */
+}
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
 }
